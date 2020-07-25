@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    {% block title %}<title>Develooper</title>{% endblock %}
+</head>
+<body>
+{% block content %}
+<div class="outro">{{ result }}<br><br>
+<a href="{% url 'crud:home' %}">BACK</a>
+</div> 
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,76 @@
+{% extends 'base.html'%}
+{% load static %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    {% block title%}<title>Create your account!</title>{% endblock %}
+
+</head>
+<body>
+{% block content %}
+<div class="outro">Here, you can create your new account!</div><br><br><br>
+ <form method="post">
+        {% csrf_token %}
+            <!--<div id="form_format">Enter your name:</div>
+            {{ form.username }} <br>
+            <div id="form_format">Enter your birthdate:</div> 
+            <input type="date" name="user_birthdate" required id="id_user_birthdate"><br> 
+            <div id="form_format">Select your gender:</div> 
+            <select name="user_gender" id="gender_input" required>
+                <option></option>
+                <option value="m">Male</option>
+                <option value="f">Female</option>
+            </select> -->
+
+            <div id="form_format">Enter your email:</div><br>
+            {{ registration_form.email }} <br>
+            <div id="form_format">Enter your username:</div><br>
+            {{ registration_form.username }} <br>
+            <div id="form_format">Enter your password:</div><br>
+            {{ registration_form.password1 }} <br>
+            <div id="form_format">Confirm your password:</div><br>
+            {{ registration_form.password2}} <br><br>
+
+ 
+          
+
+            <!--<div class="outro">
+                <label for="id_email">Email:</label>
+                <input type="email" name="email" maxlength="60" autofocus required id="id_email">{{ registration_form.email.errors }}</div>
+
+            <div class="outro">
+                <label for="id_username">Username:</label>
+                <input type="text" name="username" maxlength="30" required id="id_username">{{ registration_form.email.errors }}</div>
+                
+            <div class="outro">
+                <label for="id_password1">Password:</label>
+                <input type="password" name="password1" autocomplete="new-password" required id="id_password1">{{ registration_form.email.errors }}</div>
+            
+            <div class="outro">
+                <label for="id_password2">Password confirmation:</label>
+                <input type="password" name="password2" autocomplete="new-password" required id="id_password2"><br><br> {{ registration_form.email.errors }}</div><br>-->
+
+
+        <input id="register_input" type="submit" value = "Register">
+    </form>
+
+<div class="outro"><a href="{% url 'crud:home' %}">BACK</a><br><br></div>
+
+           <div class="alert">
+            {{ registration_form.email.errors }}
+            {{ registration_form.username.errors }}
+            {{ registration_form.password1.errors }}
+            {{ registration_form.password2.errors }}</div>
+
+            {% if registration_form.non_field_errors %}
+                <div class="form_format">
+                    {{registration_form.non_field_errors}}
+                </div>
+            {% endif %}
+
+{{ response }}
+{% endblock %}
+</body>
+</html>
+
+
