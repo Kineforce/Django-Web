@@ -1,0 +1,35 @@
+{% extends 'base.html' %} 
+{% load static %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    {% block title %}<title>Develooper</title>{% endblock %}
+</head>
+<body>
+{% block content %}
+<div id="mySidenav" class="sidenav">    
+<a style="cursor:pointer" class="blosebtn" onclick="closeNav()">&times;</a>
+{% if user.is_authenticated %}
+    <a href="{% url 'crud:logout' %}">LOGOUT</a>
+    <a href="{% url 'crud:about' %}" >ABOUT US</a>
+    <a href="{% url 'crud:signin' %}" >SIGN IN</a>
+    <a href="{% url 'crud:signup' %}" >SIGN ON</a>
+    {% else %}
+        <a href="{% url 'crud:about' %}" >ABOUT US</a>
+        <a href="{% url 'crud:signin' %}" >SIGN IN</a>
+        <a href="{% url 'crud:signup' %}" >SIGN ON</a>
+{% endif %}
+</div>
+
+
+<div class="horizontal-row"></div>
+<span class="outro" style="cursor:pointer" onclick="openNav()">&#9776; MENU</span>
+<div class="intro">
+    <span>Welcome to the website called: Develooper!<span>
+</div>
+<div class="horizontal-row"></div><br>
+
+
+{% endblock %}
+</body>
+</html>

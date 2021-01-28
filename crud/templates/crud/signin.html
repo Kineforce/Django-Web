@@ -1,0 +1,67 @@
+{% extends 'base.html'%}
+{% load static %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    {% block title %}<title>Log into your account!</title> {% endblock %}
+</head>
+<body>
+{% block content %}
+<div class="outro">Here, you can log into your account!</div>
+<br><br>
+<form method="post">
+    {% csrf_token %}
+
+        <div id="form_format">Enter your email:</div><br>
+        {{ signin_form.email }} <br>
+        <div id="form_format">Enter your password:</div><br>
+        {{ signin_form.password }} <br>
+
+        <!--
+            
+            <div class="alert">
+            {{ signin_form.email.errors }}
+            {{ signin_form.password.errors }}
+        </div>
+            
+            {% for field in signin_form %}
+        <p>
+            {{field.label_tag}}
+            {{field}}
+
+            {% if field.help_text %}
+                <small style="color: grey;">{{field.help_text}}</small>
+            {% endif %}
+
+            {% for error in field.errors %}
+                <p style="color: red;">{{error}}</p>
+            {% endfor %}
+
+            {% if signin_form.non_field_errors %}
+                <div style="color:red;">
+                    <p>{{signin_form.non_field_errors}}</p>
+                </div>
+            {% endif %}
+
+            </p>
+
+            {% for field in signin_form %}
+            {% for error in field.errors %}
+                <p style="color:red;">{{error}}</p>
+            {% endfor %}
+        {% endfor %}       
+
+        {% endfor %}-->
+
+    <input id="login_input" type="submit" value = "Login"></form>
+<div class="outro"><a href="{% url 'crud:home' %}">BACK</a></div>
+
+        {% if signin_form.non_field_errors %}
+            <div class="alert">
+                <li>Invalid Email or Password!</li>
+            </div>
+        {% endif %} 
+    
+{% endblock %}
+</body>
+</html>

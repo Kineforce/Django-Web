@@ -1,0 +1,183 @@
+.intro {
+    font-size: 30px;
+    font-family: monospace;
+    margin-left: 25%;
+    margin-top: 0%;
+    color: grey;
+    display: inline-block;
+}
+
+.horizontal-row {
+    Float: left;
+    height: 1px;
+    width: 100%;
+    margin-right: auto;
+    background-color: whitesmoke;
+}
+
+.outro {
+    font-size: 30px;
+    font-family: monospace;
+    color: grey;
+    display: inline-block;
+}
+
+.outro a:hover {
+    color: cornflowerblue;
+}
+
+.outro a {
+    font-size: 30px;
+    font-family: monospace;
+    color: grey;
+    
+}
+
+body {
+    background: url('/static/images/bg4.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.sidenav {
+    display: none;
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: monospace;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: cornflowerblue;
+}
+
+#form_format {
+    font-size: 25px;
+    font-family: monospace;
+    color: grey;
+    display: inline-block;
+}
+
+input[type=text], [type=email], [type=password] {
+    padding: 3px 5px;
+    width: 30rem;
+    height: 2rem;
+    min-width: 30rem;
+}
+
+.list_online {
+    margin-left: 10px;
+    font-size: 30px;
+    font-family: monospace;
+    color: grey;
+    display: inline-block;
+
+}
+
+
+/*input[type=text] {
+    width: 30%;
+    height: 3%;
+    font-size: 20px;
+    font-family: monospace;
+}
+
+
+input[type=email] {
+    width: 30%;
+    height: 3%;
+    font-family: monospace;
+}
+
+input[type=password] {
+    width: 30%;
+    height: 3%;
+    font-size: 20px;
+    font-family: monospace;
+}
+
+input[type=date] {
+    width: 30%;
+    height: 3%;
+    font-size: 20px;
+    font-family: monospace;
+}*/
+
+#register_input {
+    color: cornflowerblue;
+    font-size: 100%;
+    position: relative;
+    border-color: black;
+    background-color: white;
+}
+
+#login_input {
+    color: cornflowerblue;
+    font-size: 100%;
+    position: relative;
+    border-color: black;
+    background-color: white;
+    margin-top: 20px;
+
+}
+
+
+/*#back_input {
+    color: cornflowerblue;
+    font-size: 100%;
+    position: relative;
+    margin-top: 1%;
+    border-color: black;
+    background-color: white;
+}*/
+
+input:required,
+textarea:required {
+    border-bottom: 3px solid cornflowerblue;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 0;
+    box-shadow: 0 0 2px 1px cornflowerblue;
+}
+
+#gender_input {
+    font-family: monospace;
+    font-size: 20px;
+    background-color: whitesmoke;
+    border-color: cornflowerblue;
+}
+
+form {
+    font-size: 25px;
+}
+
+.alert {
+    font-family: monospace;
+    font-size: 20px;
+    color: rgb(0, 60, 255);
+}
+
