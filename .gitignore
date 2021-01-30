@@ -1,4 +1,4 @@
-db.sqlite
+db.sqlite3
 /crud/__pycache__
 /weblucas/__pycache__
 /weblucas/migrations
