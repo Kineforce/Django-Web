@@ -1,0 +1,4 @@
+db.sqlite
+/crud/__pycache__
+/weblucas/__pycache__
+/weblucas/migrations
