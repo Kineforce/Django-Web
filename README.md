@@ -1,2 +1,2 @@
 # Django-Web
-Desenvolvendo um site com Python e Django
+I'm building a simple website using Django. 
